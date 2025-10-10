@@ -1,0 +1,17 @@
+
+
+
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "type": "java",
+            "name": "Launch RecipeManagerApp (JavaFX 17)",
+            "request": "launch",
+            "mainClass": "RecipeManagerApp",
+            "vmArgs": "--module-path \"C:\\Java\\javafx-sdk-17.0.16\\lib\" --add-modules javafx.controls,javafx.fxml"
+        }
+    ]
+}
+
+
