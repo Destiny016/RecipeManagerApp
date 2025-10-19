@@ -1,0 +1,94 @@
+/* Destiny Harris - 10/19/25 */
+/* Styling for my Recipe Manager App */
+
+/* I went with a soft blue theme to keep it clean and modern.
+   I wanted something calm that fits a cooking/recipe vibe. */
+
+.root {
+    -fx-font-family: "Segoe UI", sans-serif;
+    -fx-background-color: #f5f6fa;
+}
+
+/* Login screen background (light gray-blue) */
+#loginRoot {
+    -fx-background-color: linear-gradient(to bottom right, #e3f2fd, #bbdefb);
+}
+
+/* Login card — makes it look centered and rounded like a mini form box */
+#loginCard {
+    -fx-background-color: white;
+    -fx-border-radius: 10;
+    -fx-background-radius: 10;
+    -fx-padding: 20;
+    -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.15), 10, 0, 3, 3);
+}
+
+/* Buttons — I used a blue shade I liked from Google's Material palette */
+.button {
+    -fx-background-color: #1565c0;
+    -fx-text-fill: white;
+    -fx-background-radius: 6;
+    -fx-font-size: 13px;
+    -fx-padding: 8 14 8 14;
+}
+
+.button:hover {
+    -fx-background-color: #1976d2; /* slightly lighter on hover */
+}
+
+/* Text fields look better with a light border and padding */
+.text-field, .text-area {
+    -fx-border-color: #cfd8dc;
+    -fx-border-radius: 4;
+    -fx-background-radius: 4;
+    -fx-padding: 5;
+}
+
+.text-field:focused, .text-area:focused {
+    -fx-border-color: #1565c0;
+    -fx-effect: dropshadow(three-pass-box, rgba(21,101,192,0.2), 5, 0, 0, 2);
+}
+
+/* Labels for section headers */
+.label {
+    -fx-font-size: 13px;
+    -fx-text-fill: #1a237e;
+    -fx-font-weight: 500;
+}
+
+/* List view styling — made it a little softer and clean */
+.list-view {
+    -fx-background-color: #fafafa;
+    -fx-border-color: #c5cae9;
+    -fx-border-radius: 6;
+    -fx-background-radius: 6;
+}
+
+/* Scrollbar clean-up — just makes it look smoother */
+.scroll-bar:vertical {
+    -fx-pref-width: 10;
+}
+
+.scroll-bar:horizontal {
+    -fx-pref-height: 10;
+}
+
+/* Recipe list items look clean and spaced */
+.list-cell {
+    -fx-padding: 8;
+    -fx-font-size: 13px;
+}
+
+/* Hyperlinks (for URLs) match the same blue as buttons */
+.hyperlink {
+    -fx-text-fill: #1976d2;
+}
+
+.hyperlink:hover {
+    -fx-underline: true;
+}
+
+/* Used for main background so everything blends nicely */
+.hbox, .vbox {
+    -fx-background-color: transparent;
+}

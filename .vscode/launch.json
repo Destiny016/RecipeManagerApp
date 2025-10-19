@@ -6,6 +6,13 @@
     "configurations": [
         {
             "type": "java",
+            "name": "TestFX",
+            "request": "launch",
+            "mainClass": "TestFX",
+            "projectName": "JavaFinalProject_baec49ec"
+        },
+        {
+            "type": "java",
             "name": "Launch RecipeManagerApp (JavaFX 17)",
             "request": "launch",
             "mainClass": "RecipeManagerApp",

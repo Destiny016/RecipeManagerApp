@@ -1,32 +1,25 @@
 // Destiny Harris
 //10/9/25
 
-
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
+import java.util.HashMap;
+import java.util.Map;
 
 public class RecipeManager {
-    private ObservableList<Recipe> recipes = FXCollections.observableArrayList();
+    private Map<String, ObservableList<Recipe>> userRecipes = new HashMap<>();
 
-    public ObservableList<Recipe> getRecipes() {
-        return recipes;
+    public ObservableList<Recipe> getRecipesForUser(String username) {
+        userRecipes.putIfAbsent(username, FXCollections.observableArrayList());
+        return userRecipes.get(username);
     }
 
-    public void addRecipe(Recipe recipe) {
-        recipes.add(recipe);
+    public void addRecipe(String username, Recipe recipe) {
+        getRecipesForUser(username).add(recipe);
     }
 
-    public void removeRecipe(Recipe recipe) {
-        recipes.remove(recipe);
-    }
-
-    public Recipe findRecipeByTitle(String title) {
-        for (Recipe recipe : recipes) {
-            if (recipe.getTitle().equalsIgnoreCase(title)) {
-                return recipe;
-            }
-        }
-        return null;
+    public void deleteRecipe(String username, Recipe recipe) {
+        getRecipesForUser(username).remove(recipe);
     }
 }
 
